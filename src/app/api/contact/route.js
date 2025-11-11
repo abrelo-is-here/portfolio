@@ -5,7 +5,10 @@ export async function POST(req) {
     const { name, email, message } = await req.json();
 
     if (!name || !email || !message) {
-      return Response.json({ success: false, message: "All fields are required" }, { status: 400 });
+      return new Response(
+        JSON.stringify({ success: false, message: "All fields are required" }),
+        { status: 400, headers: { "Content-Type": "application/json" } }
+      );
     }
 
     const transporter = nodemailer.createTransport({
@@ -26,9 +29,15 @@ export async function POST(req) {
       `,
     });
 
-    return Response.json({ success: true, message: "Message sent successfully" }, { status: 200 });
+    return new Response(
+      JSON.stringify({ success: true, message: "Message sent successfully" }),
+      { status: 200, headers: { "Content-Type": "application/json" } }
+    );
   } catch (error) {
     console.error("Mail Error:", error);
-    return Response.json({ success: false, message: "Failed to send message" }, { status: 500 });
+    return new Response(
+      JSON.stringify({ success: false, message: "Failed to send message" }),
+      { status: 500, headers: { "Content-Type": "application/json" } }
+    );
   }
 }
