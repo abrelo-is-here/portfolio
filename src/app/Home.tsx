@@ -111,7 +111,7 @@ const ContactMe = ({ primaryTextColor, cardBg, shadowClass, gradientClass, darkM
         setStatus('loading');
 
       try {
-        const res = await fetch('/api/contact' , {
+        const res = await fetch('/app/api/contact/route.js' , {
             method:"POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(formData)
