@@ -105,40 +105,28 @@ const ContactMe = ({ primaryTextColor, cardBg, shadowClass, gradientClass, darkM
     };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  if (status === 'loading') return;
+        e.preventDefault();
+        if (status === 'loading') return;
 
-  setStatus('loading');
+        setStatus('loading');
 
-  const form = e.currentTarget;
-  const formData = {
-    name: form.name.value,
-    email: form.email.value,
-    message: form.message.value,
-  };
-
-  try {
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
-    });
-
-    const data = await res.json();
-
-    if (res.ok && data.success) {
-      setStatus('success');
-      form.reset();
-    } else {
-      console.error(data.message || 'Error sending message');
-      setStatus('error');
-    }
-  } catch (err) {
-    console.error(err);
-    setStatus('error');
-  }
-};
-
+      try {
+        const res = await fetch('/app/api/contact/route.js' , {
+            method:"POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(formData)
+        })
+        const data = await res.json();
+        if (data.success) {
+            setStatus('success');
+            
+        } else {
+            console.log(data.error)
+        }
+      } catch (error) {
+        console.log(error)
+      }
+    };
 
     // Dynamic input classes based on darkMode
     const inputClasses = darkMode ?
