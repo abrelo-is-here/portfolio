@@ -123,6 +123,9 @@ const ContactMe = ({ primaryTextColor, cardBg, shadowClass, gradientClass, darkM
         } else {
             console.log(data.error)
         }
+          console.log('EMAIL_USER:', process.env.EMAIL_USER);
+          console.log('EMAIL_PASS:', process.env.EMAIL_PASS);
+
       } catch (error) {
         console.log(error)
       }
