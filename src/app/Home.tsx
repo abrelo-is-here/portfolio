@@ -486,10 +486,7 @@ function App() {
                         <p className={`text-2xl font-extrabold ${primaryTextColor}`}>{aboutMeData.living}</p>
                         <p className={`text-sm uppercase font-mono mt-1 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Living Place</p>
                     </div>
-                    <div className="flex flex-col items-center col-span-2 md:col-span-1">
-                        <p className={`text-2xl font-extrabold ${primaryTextColor}`}>{aboutMeData.birthplace.split(',')[0]}</p>
-                        <p className={`text-sm uppercase font-mono mt-1 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Birth Place</p>
-                    </div>
+                   
                 </div>
             </div>
         </section>
