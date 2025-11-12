@@ -283,7 +283,7 @@ function App() {
     // Component for the social links
     const SocialLinks = ({ large = false }) => (
         <div className="flex justify-center gap-4">
-            <a href="https://www.instagram.com/nextwave_dev1?igsh=MTh1YmU5cnVhMGJybQ%3D%3D&utm_source=qr" aria-label="LinkedIn" className={`p-3 rounded-xl ${darkMode ? 'hover:bg-cyan-400/20' : 'hover:bg-indigo-100/50'} transition-colors ${large ? 'scale-125' : ''}`}>
+            <a href="https://www.instagram.com/nextwave_dev1?igsh=MTh1YmU5cnVhMGJybQ%3D%3D&utm_source=qr" tatget="_black" aria-label="LinkedIn" className={`p-3 rounded-xl ${darkMode ? 'hover:bg-cyan-400/20' : 'hover:bg-indigo-100/50'} transition-colors ${large ? 'scale-125' : ''}`}>
                 <Linkedin className={`w-6 h-6 ${primaryTextColor}`} />
             </a>
             <a href="#" aria-label="Instagram" className={`p-3 rounded-xl ${darkMode ? 'hover:bg-cyan-400/20' : 'hover:bg-indigo-100/50'} transition-colors ${large ? 'scale-125' : ''}`}>
