@@ -608,7 +608,7 @@ function App() {
                             <div className="flex items-center gap-6 mt-8">
                                 <button
                                     onClick={() => scrollToSection('contact')}
-                                    className={`flex items-center gap-2 px-8 py-3.5 text-lg font-bold rounded-full bg-gradient-to-r ${gradientClass} text-white shadow-xl ${darkMode ? 'shadow-indigo-500/40 hover:shadow-cyan-400/40' : 'shadow-indigo-300 hover:shadow-indigo-400/50'} transition-shadow duration-300 transform hover:scale-[1.03] active:scale-95`}
+                                    className={`flex items-center cursor-pointer gap-2 px-8 py-3.5 text-lg font-bold rounded-full bg-gradient-to-r ${gradientClass} text-white shadow-xl ${darkMode ? 'shadow-indigo-500/40 hover:shadow-cyan-400/40' : 'shadow-indigo-300 hover:shadow-indigo-400/50'} transition-shadow duration-300 transform hover:scale-[1.03] active:scale-95`}
                                 >
                                     <Send className="w-5 h-5" />
                                     Launch Project
